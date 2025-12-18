@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Searchify</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🔍 Smart Doc Search</h1>
+        <p>Upload and search in your documents instantly</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span style="font-size: 1.5em">📁</span>
+          <h3>Upload Documents</h3>
+        </div>
+        <div class="card-body">
+          <div
+            class="upload-zone"
+            onclick="document.getElementById('fileInput').click()"
+          >
+            <div class="upload-icon">☁️</div>
+            <p id="uploadText"><strong>Click to Select Files</strong></p>
+            <small>Supports PDF, TXT, and DOCX</small>
+          </div>
+          <input
+            type="file"
+            id="fileInput"
+            multiple
+            style="display: none"
+            onchange="handleFileSelect()"
+          />
+
+          <button class="btn" onclick="uploadFiles()">
+            Upload Selected File
+          </button>
+          <div id="uploadStatus" class="status"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span style="font-size: 1.5em">🔎</span>
+          <h3>Search Documents</h3>
+        </div>
+        <div class="card-body">
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Enter keywords..."
+              onkeypress="handleEnter(event)"
+            />
+            <button class="btn" onclick="performSearch()">Search</button>
+          </div>
+          <div id="results"></div>
+        </div>
+      </div>
+    </div>
+    <script src="app/app.js"></script>
+  </body>
+</html>
