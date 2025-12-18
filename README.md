@@ -22,8 +22,14 @@
 
 		git clone <repository-url>
 
-2. Navigate to the project directory:
-   
-		cd SimpleSearchEngine
+2. Open in your favorite IDE:
+	- Open the project folder in VS Code, IntelliJ IDEA, Eclipse, or any Java IDE
+	- The IDE will automatically detect the pom.xml file and download all required dependencies
 
+3. Run the backend:
+	- Navigate to backend/src/main/java/Server.java
+	- Run the Server.java file
+	- You should see: "Server running at http://localhost:5500" in the terminal
 
+4. Access the application:
+   - Open your browser and navigate to: http://localhost:5500
